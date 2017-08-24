@@ -9,6 +9,28 @@
 - 请尽量遵循Markdown语法
 - 不要求提供完整的翻译，仅仅若干段的翻译也接受，积少成多
 
+### 待翻译的内容
+
+- [ ] 负责人: 无 | 完成度: 0% | [content/errors/comparison.md](content/errors/comparison.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/errors/rounding.md](content/errors/rounding.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/errors/propagation.md](content/errors/propagation.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/formats/integer.md](content/formats/integer.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/formats/binary.md](content/formats/binary.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/formats/fp.md](content/formats/fp.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/formats/exact.md](content/formats/exact.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/index.md](content/index.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/basic.md](content/basic.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/javascript.md](content/languages/javascript.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/sql.md](content/languages/sql.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/perl.md](content/languages/perl.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/python.md](content/languages/python.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/csharp.md](content/languages/csharp.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/ruby.md](content/languages/ruby.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/php.md](content/languages/php.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/languages/java.md](content/languages/java.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/references.md](content/references.md)
+- [ ] 负责人: 无 | 完成度: 0% | [content/xkcd.md](content/xkcd.md)
+
 ----
 
 原著信息：
@@ -25,3 +47,4 @@
 > 
 > and published under the Creative Commons Attribution License (BY):
 > http://creativecommons.org/licenses/by/3.0/
+
