@@ -49,3 +49,56 @@ Resources
   * [parseFloat()](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/parseFloat)
   * [toPrecision()](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toPrecision)
 
+
+
+--- 
+title: 为 JavaScript 准备的浮点小抄
+description: Tips for using floating-point and decimal numbers in JavaScript
+--- 
+
+浮点类型
+--------
+JavaScript 是动态类型的，它经常暗地里在字符串和浮点数（IEEE 64 位值）之间转换。为了强制一个变量为浮点类型，可以使用全局函数 <code>parseFloat()</code>。
+
+		var num = parseFloat("3.5");
+
+小数类型
+-------------
+
+最古老的 JavaScript 小数类型是从 [Java的](/languages/java/) <code>BigDecimal</code> 类中移植的，它也支持 [取整模式](/errors/rounding/)：
+
+		var a = new BigDecimal("0.01");
+		var b = new BigDecimal("0.02");
+		var c = a.add(b); // 0.03
+		var d = c.setScale(1, BigDecimal.prototype.ROUND_HALF_UP);
+
+也有 <code>bignumber.js</code>，它更小[更快](http://jsperf.com/bignumber-js-vs-big-js-vs-decimal-js/8)：
+
+		BigNumber.config({ROUNDING_MODE: BigNumber.ROUND_HALF_UP})
+		var a = new BigNumber("0.01");
+		var b = new BigNumber("0.02");
+		var c = a.plus(b); // BigNumber(0.03)
+		var d = c.toFixed(1); // "0.0"
+
+
+如何取整
+------------
+
+		var num = 5.123456;
+		num.toPrecision(1) //以字符串形式返回 5 as string
+		num.toPrecision(2) //以字符串形式返回 5.1 as string
+		num.toPrecision(4) //以字符串形式返回 5.123 as string
+
+使用特殊的取整模式：
+
+		new BigDecimal("1.25").setScale(1, BigDecimal.prototype.ROUND_HALF_UP);
+
+
+资源
+---------
+* [Javascript 里的 BigDecimal](https://github.com/dtrebbien/BigDecimal.js)
+* [bignumber.js](https://github.com/MikeMcl/bignumber.js)
+* [JavaScript 核心参考](https://developer.mozilla.org/en/JavaScript/Reference)
+  * [parseFloat()](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/parseFloat)
+  * [toPrecision()](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toPrecision)
+

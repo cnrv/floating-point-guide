@@ -9,6 +9,6 @@ or
 <%= @item[:description] %>
 ====================
 
-![Obligatory xkcd cartoon](http://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png "Obligatory xkcd cartoon")
+![强制的 xkcd 漫画](http://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png "Obligatory xkcd cartoon")
 
-From [xkcd](http://www.xkcd.com/217/)
+从 [xkcd](http://www.xkcd.com/217/)
