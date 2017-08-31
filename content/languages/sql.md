@@ -37,3 +37,44 @@ Resources
 * [MySQL numeric types](http://dev.mysql.com/doc/refman/5.0/en/numeric-types.html)
 * [PostgreSQL Numeric Types](https://www.postgresql.org/docs/current/static/datatype-numeric.html)
 * [MS SQL Server data types](http://msdn.microsoft.com/en-US/library/ms187752%28v=SQL.90%29.aspx)
+
+
+--- 
+title: 为 SQL 准备的浮点小抄
+description: Tips for using floating-point and decimal numbers in SQL
+--- 
+
+浮点类型
+--------
+SQL 标准定义了三个二进制浮点类型：
+
+* `REAL` 是和实现相关的精度 (通常映射到硬件支持的类型，比如 IEEE 754 单精度或双精度)
+* `DOUBLE PRECISION` 是和实现相关的精度，它比 `REAL` 更大(通常映射到 IEEE 754 双精度)
+* `FLOAT(N)` 至少有 `N` 位二进制数的精度，它和实现相关最大化 `N`
+
+The exponent range for all three types is implementation-dependant as well.
+
+小数类型
+-------------
+标准定义了两个定点小数类型：
+
+* `NUMERIC(M,N)` 的总数字数正好有 `M` 个， 其中 `N` 个是小数点以后的数字个数
+* `DECIMAL(M,N)` 和 `NUMERIC(M,N)` 几乎一样，除了它允许总数字数多于 `M`
+
+`M` 和 `M` 的最大值和实现相关。SQL 供应商经常是把二者实现相同。
+
+如何取整
+------------
+
+SQL 标准没有取整，但大多数供应商会提供 `ROUND()` 或者 `TRUNC()` 函数。
+
+但在数据库中取整意义不大，因为数据库的工作是 *保存* 数据，但取整是 *显示* 数据，因此这类代码应该在表示层实现。
+
+
+资源
+---------
+* [官方 ISO SQL 2008 标准 (不免费)](http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=38640)
+* [SQL 92 草案 (免费)](http://www.contrib.andrew.cmu.edu/~shadow/sql/sql1992.txt)
+* [MySQL 数字类型](http://dev.mysql.com/doc/refman/5.0/en/numeric-types.html)
+* [PostgreSQL 数字类型](https://www.postgresql.org/docs/current/static/datatype-numeric.html)
+* [MS SQL Server 数据类型](http://msdn.microsoft.com/en-US/library/ms187752%28v=SQL.90%29.aspx)
