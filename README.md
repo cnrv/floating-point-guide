@@ -17,7 +17,7 @@
 - [ ] 负责人: 无 | 完成度: 0% | [content/formats/integer.md](content/formats/integer.md)
 - [x] 负责人: beyondsky | 完成度: 90% | [content/formats/binary.md](content/formats/binary.md)
 - [x] 负责人: beyondsky | 完成度: 99% | [content/formats/fp.md](content/formats/fp.md)
-- [ ] 负责人: 无 | 完成度: 0% | [content/formats/exact.md](content/formats/exact.md)
+- [x] 负责人: beyondsky | 完成度: 99% | [content/formats/exact.md](content/formats/exact.md)
 - [ ] 负责人: 无 | 完成度: 0% | [content/index.md](content/index.md)
 - [ ] 负责人: 无 | 完成度: 0% | [content/basic.md](content/basic.md)
 - [x] 负责人: benluo | 完成度: 100% | [content/languages/javascript.md](content/languages/javascript.md)
